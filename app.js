@@ -1,15 +1,24 @@
 'use strict';              
 const express = require('express');
 const app = express(); 
+
 app.get('/SCRAPER0', (req0, res0) => {
 const rq = require('request');
 const rp = require('request-promise');
+//const url = require('url');
+//var type = decodeURIComponent(url.format({ pathname: req.originalUrl })).split("☆")[1];
+		
+
+	//TO SCRAPE GTRENDS AUTOCOMPLETE & DAILY TRENDS & REAL TIME TRENDS
+
+
 const url = 'https://en.wikipedia.org/wiki/List_of_Presidents_of_the_United_States';
 
 rp(url)
   .then(function(html){
     //success!
-    console.log(html);
+    res0.header('Content-Type', 'application/json').send(html);}
+    //console.log(html);
   })
   .catch(function(err){
     //handle error
