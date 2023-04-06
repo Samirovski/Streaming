@@ -17,7 +17,7 @@ const url = 'https://en.wikipedia.org/wiki/List_of_Presidents_of_the_United_Stat
 rp(url)
   .then(function(html){
     //success!
-    res0.header('Content-Type', 'application/json').send(html);}
+    res0.header('Content-Type', 'application/json').send(html);
     //console.log(html);
   })
   .catch(function(err){
