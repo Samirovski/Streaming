@@ -20,7 +20,7 @@ rp(url).then(function(html){
 //const doc = HTMLParser.parse(html);
 //const nodes = doc.querySelectorAll('.MovieBlock a')
    
-    res0.header('Content-Type', 'application/xml').send(html);
+    res0.header('Content-Type', 'application/html').send(html);
     
   })
   
