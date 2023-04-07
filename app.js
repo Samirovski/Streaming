@@ -17,10 +17,10 @@ var HTMLParser = require('node-html-parser');
 const url = 'https://cima4u2.shop/category/%d8%a7%d9%81%d9%84%d8%a7%d9%85-%d8%a7%d8%ac%d9%86%d8%a8%d9%8a-movies7-english/page/2/';
 
 rp(url).then(function(html){
-const doc = HTMLParser.parse(html);
+//const doc = HTMLParser.parse(html);
 //const nodes = doc.querySelectorAll('.MovieBlock a')
    
-    res0.header('Content-Type', 'application/json').send(doc);
+    res0.header('Content-Type', 'application/xml').send(html);
     
   })
   
