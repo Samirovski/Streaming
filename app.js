@@ -18,9 +18,9 @@ const url = 'https://cima4u2.shop/category/%d8%a7%d9%81%d9%84%d8%a7%d9%85-%d8%a7
 
 rp(url).then(function(html){
 const doc = HTMLParser.parse(html);
-const nodes = doc.querySelectorAll('.MovieBlock a')
+//const nodes = doc.querySelectorAll('.MovieBlock a')
    
-    res0.header('Content-Type', 'application/json').send(nodes);
+    res0.header('Content-Type', 'application/json').send(doc);
     
   })
   
